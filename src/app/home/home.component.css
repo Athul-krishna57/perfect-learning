@@ -1,0 +1,15 @@
+*{
+    font-family: sans-serif;
+}
+
+.sort-button{
+    border: none;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.sort-button:hover{
+    scale: 1.1;
+}

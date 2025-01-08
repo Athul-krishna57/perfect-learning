@@ -1,0 +1,25 @@
+<div tabindex="0">
+    <ul>
+      <ng-container *ngFor="let node of treeData">
+        <li>
+          {{ node.name }}
+          <ul *ngIf="node.children">
+            <ng-container *ngFor="let child of node.children">
+              <li>
+                {{ child.name }}
+                <ul *ngIf="child.children">
+                  <ng-container *ngFor="let secondChild of child.children">
+                    <li>
+                      {{ secondChild.name }}
+                      <button class="sort-button" (click)="navigateOrderQuestion(node.name)">sort</button>
+                    </li>
+                  </ng-container>
+                </ul>
+              </li>
+            </ng-container>
+          </ul>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+  

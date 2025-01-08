@@ -1,0 +1,26 @@
+<div class="head-line">
+  Subject : {{subjectName}} 
+  <button (click)="save()">save</button>
+</div>
+<div cdkDropList cdkDropListOrientation="mixed" class="example-list" (cdkDropListDropped)="drop($event)">
+  @for (item of items; track item) {
+  <div class="example-box" cdkDrag>
+    <div style="text-align: center;">
+      <span style="text-align: center;">{{subjectName}}_{{item.Id}}</span>
+    </div>
+    <div class="question">
+      <p>{{item.question}}</p>
+      @for (option of item.options; track option){
+      <label><input type="radio" name="q1" value="{{option}}">{{option}}</label>
+      }
+      <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates, atque blanditiis porro aliquid facilis doloribus, inventore placeat possimus eum sit quod aliquam deleniti amet ipsam animi? Porro, in vitae!</div>
+      <label for="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta rem quasi atque ipsam dolor doloremque debitis, unde modi nemo nulla dignissimos. Delectus, quia. Ratione ipsum magnam voluptatum provident voluptatibus tempore.</label>
+      <label for="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta rem quasi atque ipsam dolor doloremque debitis, unde modi nemo nulla dignissimos. Delectus, quia. Ratione ipsum magnam voluptatum provident voluptatibus tempore.</label>
+      <label for="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta rem quasi atque ipsam dolor doloremque debitis, unde modi nemo nulla dignissimos. Delectus, quia. Ratione ipsum magnam voluptatum provident voluptatibus tempore.</label>
+      <label for="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta rem quasi atque ipsam dolor doloremque debitis, unde modi nemo nulla dignissimos. Delectus, quia. Ratione ipsum magnam voluptatum provident voluptatibus tempore.</label>
+      <label for="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta rem quasi atque ipsam dolor doloremque debitis, unde modi nemo nulla dignissimos. Delectus, quia. Ratione ipsum magnam voluptatum provident voluptatibus tempore.</label>
+      <label for="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta rem quasi atque ipsam dolor doloremque debitis, unde modi nemo nulla dignissimos. Delectus, quia. Ratione ipsum magnam voluptatum provident voluptatibus tempore.</label>
+    </div>
+  </div>
+  }
+</div>
